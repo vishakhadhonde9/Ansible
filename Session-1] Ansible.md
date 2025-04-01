@@ -48,14 +48,14 @@
    - Modules → Built-in Ansible tools for automation
 
 
-        - name: Install Nginx on Web Servers
-          hosts: web_servers
-          become: yes  # Run as root (sudo)
-          tasks:
-            - name: Install Nginx
-              apt:
-                name: nginx
-                state: present
+         - name: Install Nginx on Web Servers
+           hosts: web_servers
+           become: yes  # Run as root (sudo)
+           tasks:
+             - name: Install Nginx
+               apt:
+                 name: nginx
+                 state: present
 
 
 name: → Describes the playbook’s purpose
