@@ -58,11 +58,11 @@
                  state: present
 
 
-name: → Describes the playbook’s purpose
-hosts: → The group of servers where it runs (from the inventory file)
-become: yes → Runs the tasks with sudo privileges
-tasks: → List of actions to perform
-apt: → Installs software (specific to Ubuntu/Debian)
+- name: → Describes the playbook’s purpose
+- hosts: → The group of servers where it runs (from the inventory file)
+- become: yes → Runs the tasks with sudo privileges
+- tasks: → List of actions to perform
+- apt: → Installs software (specific to Ubuntu/Debian)
 
 ###### Running a Playbook -
 
