@@ -9,7 +9,6 @@
               apt:
                 name: "{{ item }}"
                 state: present
-                update_cache: yes
               with_items:
                 - nginx
                 - mariadb-server
@@ -28,7 +27,6 @@
               apt:
                 name: "{{ item }}"
                 state: present
-                update_cache: yes
               loop:
                 - nginx
                 - mariadb-server
