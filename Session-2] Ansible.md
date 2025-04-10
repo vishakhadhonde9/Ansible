@@ -16,6 +16,24 @@
                 - php
 
 
+# Loop -
+- Loops are used to repeat a task multiple times with different items.
+
+- name: Setup LEMP stack
+          hosts: webservers
+          become: yes
+        
+          tasks:
+            - name: Install web server packages
+              apt:
+                name: "{{ item }}"
+                state: present
+                update_cache: yes
+              loop:
+                - nginx
+                - mariadb-server
+                - php
+
 # Create File and Directory -
 - To create a file or directory in Ansible, you use the file module.
 
