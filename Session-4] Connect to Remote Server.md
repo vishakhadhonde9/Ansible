@@ -32,3 +32,28 @@
                 name: nginx
                 state: started
                 enabled: yes
+
+# Remote Server with different OS -
+## Method -1] 
+
+            - name: Install Nginx on multiple Linux distros
+              hosts: webservers
+              become: true
+              tasks:
+                - name: Install Nginx (Debian-based)
+                  apt:
+                    name: nginx
+                    state: present
+                  when: ansible_os_family == "Debian"
+            
+                - name: Install Nginx (RHEL-based)
+                  yum:
+                    name: nginx
+                    state: present
+                  when: ansible_os_family == "RedHat"
+            
+                - name: Ensure Nginx is running and enabled
+                  service:
+                    name: nginx
+                    state: started
+                    enabled: yes
