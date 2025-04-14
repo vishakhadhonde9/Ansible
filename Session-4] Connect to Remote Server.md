@@ -57,3 +57,48 @@
                     name: nginx
                     state: started
                     enabled: yes
+
+
+# Method-2]
+
+- name: Install and manage Nginx on Ubuntu and Amazon Linux
+  hosts: webserver
+  become: true
+  gather_facts: true
+
+  tasks:
+    - name: Install Nginx on Ubuntu
+      apt:
+        name: nginx
+        state: present
+      when: ansible_facts['distribution'] == "Ubuntu"
+
+    - name: Install Nginx on Amazon Linux
+      dnf:
+        name: nginx
+        state: present
+      when: ansible_facts['distribution'] == "Amazon"
+
+    - name: Start Nginx on Ubuntu
+      service:
+        name: nginx
+        state: started
+      when: ansible_facts['distribution'] == "Ubuntu"
+
+    - name: Start Nginx on Amazon Linux
+      service:
+        name: nginx
+        state: started
+      when: ansible_facts['distribution'] == "Amazon"
+
+    - name: Restart Nginx on Ubuntu
+      service:
+        name: nginx
+        state: restarted
+      when: ansible_facts['distribution'] == "Ubuntu"
+
+    - name: Restart Nginx on Amazon Linux
+      service:
+        name: nginx
+        state: restarted
+      when: ansible_facts['distribution'] == "Amazon"
