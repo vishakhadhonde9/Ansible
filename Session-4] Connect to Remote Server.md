@@ -20,6 +20,8 @@
           hosts: webservers
           become: true
           tasks:
+            - name: apt update
+              shell: 'apt update'
             - name: Install Nginx
               apt:
                 name: nginx
