@@ -15,8 +15,8 @@
 
 - Create new/Change existing Inventory file.
 
-     [webservers]
-      your_remote_server_ip ansible_user=your_ssh_user ansible_private_key_file=keypair.pem
+           [webservers]
+            your_remote_server_ip ansible_user=your_ssh_user ansible_private_key_file=keypair.pem
 
 - Create playbook file
 
