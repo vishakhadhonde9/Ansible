@@ -2,7 +2,11 @@
 - Create remote server (EC2 inatsnce).
 - Copy keypair of remote server into ansible server.
 
-      scp -i ansible_keypair.pem localpath_to_remotekeypair.pem user@ansible_server_ip
+      scp -i ansible_keypair.pem localpath_to_remotekeypair.pem user@ansible_server_ip:destination
+
+      scp -i ./Downloads/ansible.pem ./Downloads/ansible.pem ubuntu@54.204.253.186:/home/ubuntu/54.204.253.18654.204.253.186
+
+
 
 - Connnect to Ansible server and verify keypair is copied.c
 - Add Permissions to keypair.
