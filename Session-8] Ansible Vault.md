@@ -64,7 +64,7 @@
                 state: present
         
 
-
+ansible-playbook -i myhost.ini secret.yml --ask-vault-pass
 
 
 
