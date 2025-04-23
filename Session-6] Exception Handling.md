@@ -25,7 +25,7 @@
                 - block:
                     - name: Install ambiguous package
                       apt:
-                        name: nginx
+                        name: dgjskja
                         state: present
             
             
