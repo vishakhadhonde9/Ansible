@@ -47,10 +47,9 @@
 ## Playbook file
 
       - name: Install NGINX using custom role
-        hosts: webservers
+        hosts: localhost
         become: true
         roles:
           - role_name
 
 
-- 
