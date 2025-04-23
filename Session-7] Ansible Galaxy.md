@@ -9,6 +9,8 @@
 
     ansible-galaxy init role_name
 
+## Structure of Role -
+
 
         myrole/
         ├── defaults/
