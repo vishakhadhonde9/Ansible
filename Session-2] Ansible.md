@@ -18,10 +18,10 @@
 # Loop -
 - Loops are used to repeat a task multiple times with different items.
 
-- name: Setup LEMP stack
-          hosts: webservers
-          become: yes
-        
+        - name: Setup LEMP stack
+                  hosts: webservers
+                  become: yes
+                
           tasks:
             - name: Install web server packages
               apt:
