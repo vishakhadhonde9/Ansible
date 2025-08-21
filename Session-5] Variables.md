@@ -1,6 +1,6 @@
 # Variables -
 - Variables are used to store values.
-- Template is required if you are using variable.
+- Template is required if you are using variable for copying purpose.
 
                 - name: myplay1
                   hosts: localhost
