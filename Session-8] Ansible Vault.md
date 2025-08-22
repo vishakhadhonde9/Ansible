@@ -8,14 +8,14 @@
  
 ## 1. Encrypt a file
 
-  ansible-vault encrypt mypass.txt
+  ansible-vault encrypt mypass.yml
 
 ## 2. Decrypt a file
 
-  ansible-vault decrypt mypass.txt
+  ansible-vault decrypt mypass.yml
 
 
-## Credentials (mypass.txt)
+## Credentials (mypass.yml)
    
     username: myuser
     password: mysecurepassword
