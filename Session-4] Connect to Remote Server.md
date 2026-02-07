@@ -90,3 +90,10 @@
                           name: nginx
                           state: started
                           enabled: true
+
+
+#### Add env var to avoid key checking:
+
+            export ANSIBLE_HOST_KEY_CHECKING=False
+
+            
